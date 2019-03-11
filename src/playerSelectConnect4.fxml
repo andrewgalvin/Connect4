@@ -6,12 +6,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
       <TextField fx:id="redName" layoutX="96.0" layoutY="188.0" promptText="Enter Name" />
       <TextField fx:id="yellowName" layoutX="396.0" layoutY="188.0" promptText="Enter Name" />
-      <Button fx:id="startGameButton" layoutX="262.0" layoutY="252.0" mnemonicParsing="false" text="Start Game" />
+      <Button fx:id="startGameButton" layoutX="262.0" layoutY="252.0" mnemonicParsing="false" onMouseClicked="#startGameButtonClicked" text="Start Game" />
       <Label alignment="CENTER" layoutX="41.0" layoutY="188.0" prefHeight="25.0" prefWidth="55.0" text="Red:" />
       <Label alignment="CENTER" layoutX="337.0" layoutY="188.0" prefHeight="25.0" prefWidth="55.0" text="Yellow" />
       <Label layoutX="83.0" layoutY="53.0" text="Welcome to Connect 4">
@@ -20,6 +19,11 @@
          </font>
       </Label>
       <Label layoutX="226.0" layoutY="117.0" text="Please enter your name.">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorNameLabel" layoutX="183.0" layoutY="308.0" text="Error: Please enter both player names." textFill="#ffffff00">
          <font>
             <Font size="14.0" />
          </font>
