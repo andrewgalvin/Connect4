@@ -10,12 +10,11 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.gameBoardController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: dodgerblue;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.gameBoardController">
 
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="800.0" stroke="BLACK" strokeType="INSIDE" width="800.0" />
 
-      <GridPane layoutX="50.0" layoutY="150.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0">
+      <GridPane fx:id="boardPane" layoutX="50.0" layoutY="150.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0">
 
         <columnConstraints>
 
@@ -53,7 +52,7 @@
 
          <children>
 
-            <Circle fx:id="circle00" fill="WHITE" onMousePressed="#circle00Click" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle00" fill="WHITE" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
 
             <Circle fx:id="circle01" fill="WHITE" radius="50.0" stroke="BLACK" strokeType="INSIDE" GridPane.rowIndex="1" />
 
@@ -144,19 +143,19 @@
 
       </GridPane>
 
-            <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="50.0" layoutY="147.0" onMouseEntered="#highlight" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
+            <Rectangle fx:id="rect0" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="50.0" layoutY="147.0" onMouseEntered="#highlight0" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
 
-            <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="150.0" layoutY="147.0" onMouseEntered="#highlight2" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
+            <Rectangle fx:id="rect1" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="150.0" layoutY="147.0" onMouseEntered="#highlight1" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
 
-      <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="250.0" layoutY="147.0" onMouseEntered="#highlight3" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
+      <Rectangle fx:id="rect2" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="250.0" layoutY="147.0" onMouseEntered="#highlight2" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
 
-            <Rectangle fx:id="rect4" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="350.0" layoutY="147.0" onMouseEntered="#highlight4" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
+            <Rectangle fx:id="rect3" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="350.0" layoutY="147.0" onMouseEntered="#highlight3" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
 
-      <Rectangle fx:id="rect5" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="450.0" layoutY="147.0" onMouseEntered="#highlight5" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
+      <Rectangle fx:id="rect4" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="450.0" layoutY="147.0" onMouseEntered="#highlight4" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
 
-                  <Rectangle fx:id="rect6" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="550.0" layoutY="147.0" onMouseEntered="#highlight6" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
+                  <Rectangle fx:id="rect5" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="550.0" layoutY="147.0" onMouseEntered="#highlight5" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
 
-            <Rectangle fx:id="rect7" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="650.0" layoutY="147.0" onMouseEntered="#highlight7" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
+            <Rectangle fx:id="rect6" arcHeight="5.0" arcWidth="5.0" fill="#fbff2100" height="607.0" layoutX="650.0" layoutY="147.0" onMouseEntered="#highlight6" opacity="0.2" stroke="#ffffff00" strokeType="INSIDE" width="100.0" />
       <Label layoutX="299.0" layoutY="48.0" text="Turn:">
          <font>
             <Font size="46.0" />

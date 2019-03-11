@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-public class Controller {
+public class playerSelectController{
 	
 	@FXML private Button startGameButton;
 	@FXML private TextField yellowName;
@@ -27,15 +27,17 @@ public class Controller {
 		if(yellowName.getText().trim().isEmpty() || redName.getText().trim().isEmpty()) {
 			errorNameLabel.setTextFill(Color.RED);
 		}else {
+			
 			stage.close();
 			
 			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("gameBoard.fxml"));
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			stage.setScene(scene);
+			//stage.setResizable(false);
 			stage.show();
 			player1Name = redName.getText();
-			player2Name = yellowName.getText();
+			player2Name = yellowName.getText();	
 			System.out.println("Player 1 " + player1Name);
 			System.out.println("Player 2 " + player2Name);
 		}

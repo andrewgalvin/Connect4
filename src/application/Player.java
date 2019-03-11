@@ -1,6 +1,9 @@
 package application;
 
-public interface Player{
-	String player1Name = Controller.player1Name;
-	String player2Name = Controller.player2Name;
+import javafx.scene.paint.Color;
+
+public class Player{
+	public static String player1Name = playerSelectController.player1Name;
+	public static String player2Name = playerSelectController.player2Name;
+	public static Color pieceColor = Color.RED;
 }
