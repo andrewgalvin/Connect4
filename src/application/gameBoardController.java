@@ -1,6 +1,7 @@
-package application;
+/*package application;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -118,6 +119,10 @@ public class gameBoardController extends GameRules {
 	// Grid
 	@FXML
 	GridPane boardPane;
+	
+	//Turn
+	@FXML
+	Label playerTurn;
 
 	public void highlight0() {
 		rect0.setFill(Color.YELLOW);
@@ -125,22 +130,27 @@ public class gameBoardController extends GameRules {
 		rect0.setOnMouseClicked(e -> {
 			if (!isFilled(circle05)) {
 				circle05.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle04)) {
 				circle04.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle03)) {
 				circle03.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle02)) {
 				circle02.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle01)) {
 				circle01.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle00)) {
 				circle00.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
+				try {
+					checkTie();
+				}catch(Exception e1) {
+					System.out.println("ERROR");
+				}
 			}
 		});
 
@@ -152,22 +162,22 @@ public class gameBoardController extends GameRules {
 		rect1.setOnMouseClicked(e -> {
 			if (!isFilled(circle15)) {
 				circle15.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle14)) {
 				circle14.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle13)) {
 				circle13.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle12)) {
 				circle12.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle11)) {
 				circle11.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle10)) {
 				circle10.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			}
 		});
 	}
@@ -178,22 +188,22 @@ public class gameBoardController extends GameRules {
 		rect2.setOnMouseClicked(e -> {
 			if (!isFilled(circle25)) {
 				circle25.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle24)) {
 				circle24.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle23)) {
 				circle23.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle22)) {
 				circle22.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle21)) {
 				circle21.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle20)) {
 				circle20.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			}
 		});
 	}
@@ -204,22 +214,22 @@ public class gameBoardController extends GameRules {
 		rect3.setOnMouseClicked(e -> {
 			if (!isFilled(circle35)) {
 				circle35.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle34)) {
 				circle34.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle33)) {
 				circle33.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle32)) {
 				circle32.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle31)) {
 				circle31.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle30)) {
 				circle30.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			}
 		});
 	}
@@ -230,22 +240,22 @@ public class gameBoardController extends GameRules {
 		rect4.setOnMouseClicked(e -> {
 			if (!isFilled(circle45)) {
 				circle45.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle44)) {
 				circle44.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle43)) {
 				circle43.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle42)) {
 				circle42.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle41)) {
 				circle41.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle40)) {
 				circle40.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			}
 		});
 	}
@@ -256,22 +266,22 @@ public class gameBoardController extends GameRules {
 		rect5.setOnMouseClicked(e -> {
 			if (!isFilled(circle55)) {
 				circle55.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle54)) {
 				circle54.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle53)) {
 				circle53.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle52)) {
 				circle52.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle51)) {
 				circle51.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle50)) {
 				circle50.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			}
 		});
 	}
@@ -282,23 +292,23 @@ public class gameBoardController extends GameRules {
 		rect6.setOnMouseClicked(e -> {
 			if (!isFilled(circle65)) {
 				circle65.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle64)) {
 				circle64.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle63)) {
 				circle63.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle62)) {
 				circle62.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle61)) {
 				circle61.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			} else if (!isFilled(circle60)) {
 				circle60.setFill(Player.pieceColor);
-				changeTurn();
+				changeTurn(playerTurn);
 			}
 		});
 	}
-}
+}*/
