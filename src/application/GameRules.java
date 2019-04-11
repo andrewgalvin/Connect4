@@ -65,7 +65,7 @@ public class GameRules {
 		}
 		/*
 		 * If loop completes and i == rows
-		 * place disk 1 above.
+		 * place disk 1 above the row.
 		 * 
 		 * Without this code the disk would only be placed in the 
 		 * bottom row of the game board.
