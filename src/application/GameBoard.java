@@ -21,9 +21,6 @@ public class GameBoard extends GameRules {
 	/*
 	 * Variables used
 	 */
-	public static final int TILE_SIZE = 100;
-	public static final int COLUMNS = 7;
-	public static final int ROWS = 6;
 	public static final int[][] board = new int[COLUMNS][ROWS];
 	public static final Circle[][] boardCirc = new Circle[COLUMNS][ROWS];
 	public GridPane game = new GridPane();
@@ -65,7 +62,7 @@ public class GameBoard extends GameRules {
 		for (int i = 0; i < COLUMNS; i++) {
 			for (int j = 0; j < ROWS; j++) {
 				board[i][j] = 0;
-				boardCirc[i][j] = new Circle(TILE_SIZE / 2);
+				boardCirc[i][j] = new Circle(GameRules.TILE_SIZE / 2);
 				boardCirc[i][j].setFill(Color.WHITE);
 				game.add(boardCirc[i][j], i, j);
 			}
@@ -99,7 +96,7 @@ public class GameBoard extends GameRules {
 			rect.get(i).setFill(Color.TRANSPARENT);
 			
 			//Changes color of rectangle when mouse enters it
-			rect.get(i).setOnMouseEntered(e -> rect.get(column).setFill(Color.rgb(240, 240, 0, 0.2)));
+			rect.get(i).setOnMouseEntered(e -> rect.get(column).setFill(Color.rgb(100, 240, 0, 0.2)));
 			//Changes color of rectangle when mouse leaves it back to the default color
 			rect.get(i).setOnMouseExited(e -> rect.get(column).setFill(Color.TRANSPARENT));
 			/*

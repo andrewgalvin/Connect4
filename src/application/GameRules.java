@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 public class GameRules {
 	public static final int COLUMNS = 7;
 	public static final int ROWS = 6;
+	public static final int TILE_SIZE = 100;
 
 	/**
 	 * 
