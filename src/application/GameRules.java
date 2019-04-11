@@ -229,7 +229,7 @@ public class GameRules {
 		/*
 		 * 2D Loop to loop through the 2D board
 		 * checks to see if in the 2D board,
-		 * the location based off one center location: 
+		 * the location based off one beginning location: 
 		 * {1 to the right, 1 above}
 		 * {2 to the right, 2 above}
 		 * {3 to the right, 3 above}
@@ -272,7 +272,7 @@ public class GameRules {
 		/*
 		 * 2D Loop to loop through the 2D board
 		 * checks to see if in the 2D board,
-		 * the location based off one center location: 
+		 * the location based off one beginning location: 
 		 * {1 to the left, 1 above}
 		 * {2 to the left, 2 above}
 		 * {3 to the left, 3 above}
