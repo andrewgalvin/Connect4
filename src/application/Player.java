@@ -3,7 +3,7 @@ package application;
 public abstract class Player {
 
 	public static String name;
-	
+
 	/**
 	 * 
 	 * Constructor for player name
@@ -15,6 +15,11 @@ public abstract class Player {
 		Player.name = name;
 	}
 
+	public Player() {
+		// TODO Auto-generated constructor stub
+		Player.name = "Player";
+	}
+
 	/**
 	 * 
 	 * Returns player's name
@@ -24,4 +29,9 @@ public abstract class Player {
 		//Return player's name
 		return name;
 	}
+	
+	public abstract boolean getTurn();
+	
+	public abstract void changeTurn();
+	
 }

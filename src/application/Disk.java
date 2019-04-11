@@ -1,6 +1,6 @@
 package application;
 
-public class Disk {
+public class Disk extends Player{
 	private boolean turn = true;
 	
 	/*
@@ -15,6 +15,7 @@ public class Disk {
 	 */
 	public Disk(boolean turn) {
 		//Creates default turn
+		super();
 		this.turn = turn;
 	}
 	
