@@ -24,9 +24,7 @@ public class GameBoard extends GameRules {
 	public static final int TILE_SIZE = 100;
 	public static final int COLUMNS = 7;
 	public static final int ROWS = 6;
-	final int TOTAL_MOVES = 0;
 	public static final int[][] board = new int[COLUMNS][ROWS];
-	public static final Rectangle[] rect = new Rectangle[COLUMNS];
 	public static final Circle[][] boardCirc = new Circle[COLUMNS][ROWS];
 	public GridPane game = new GridPane();
 	public Pane root = new Pane();
