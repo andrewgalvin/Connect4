@@ -66,6 +66,9 @@ public class GameRules {
 		/*
 		 * If loop completes and i == rows
 		 * place disk 1 above.
+		 * 
+		 * Without this code the disk would only be placed in the 
+		 * bottom row of the game board.
 		 */
 		if (i == ROWS) {
 			board[column][i - 1] = player;
