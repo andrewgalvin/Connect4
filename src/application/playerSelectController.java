@@ -26,7 +26,12 @@ public class playerSelectController extends GameBoard {
 	public static String player1Name;
 	public static String player2Name;
 
+	/**
+	 * Method to say what pressing the ENTER key does
+	 */
 	public void enter() {
+		
+		//What to do when ENTER is pressed while in yellowName TextField
 		yellowName.setOnKeyPressed(e -> {
 			if (e.getCode() == KeyCode.ENTER) {
 				try {
@@ -36,6 +41,7 @@ public class playerSelectController extends GameBoard {
 				}
 			}
 		});
+		//What to do when ENTER is pressed while in redName textField
 		redName.setOnKeyPressed(e -> {
 			if (e.getCode() == KeyCode.ENTER) {
 				try {
@@ -47,23 +53,29 @@ public class playerSelectController extends GameBoard {
 		});
 	}
 
+	/**
+	 * 
+	 * Method to begin the game off of the Player Select GUI
+	 * 
+	 * @throws IOException
+	 */
 	public void startGameButtonClicked() throws IOException {
 		Stage stage = (Stage) startGameButton.getScene().getWindow();
+		//Checks to see if both TextFields are not empty
 		if (yellowName.getText().trim().isEmpty() || redName.getText().trim().isEmpty()) {
+			//Error message to display if one or both are empty
 			errorNameLabel.setTextFill(Color.RED);
 		} else {
-
 			stage.close();
-
+			
+			//Starts game
 			GameBoard game = new GameBoard();
-			stage.setScene(new Scene(game.createContent()));
+			stage.setScene(new Scene(game.createBoard()));
 			stage.setTitle("Connect 4!");
 			stage.show();
 			stage.setOnCloseRequest(e -> Platform.exit());
 			player1Name = redName.getText();
 			player2Name = yellowName.getText();
-			System.out.println("Player 1 " + player1Name);
-			System.out.println("Player 2 " + player2Name);
 		}
 	}
 

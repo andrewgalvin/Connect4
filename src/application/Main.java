@@ -1,17 +1,16 @@
 package application;
 	
-import java.net.URL;
-import java.util.ResourceBundle;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
-public class Main extends Application implements Initializable{
+public class Main extends Application{
 		
+	/* (non-Javadoc)
+	 * @see javafx.application.Application#start(javafx.stage.Stage)
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -27,13 +26,11 @@ public class Main extends Application implements Initializable{
 		}
 	}
 	
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
 
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		
-	}
 }

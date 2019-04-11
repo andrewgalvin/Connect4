@@ -1,4 +1,4 @@
-package application;
+/*package application;
 
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -222,4 +222,4 @@ public class ConnectGUI extends Application {
 		}
 	}
 
-}
+}*/
