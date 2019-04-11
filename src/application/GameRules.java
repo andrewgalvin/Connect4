@@ -52,7 +52,7 @@ public class GameRules {
 			if (board[column][0] != 0) {
 				break;
 			}
-			//If the column and row is not empty, places disk 1 above the empty space
+			//If the column is not full and the column/row is full, places disk 1 above the empty space
 			if (board[column][i] == 1 || board[column][i] == 2) {
 				board[column][i - 1] = player;
 				boardCirc[column][i - 1].setFill(disk.getTurn() ? Color.RED : Color.YELLOW);
