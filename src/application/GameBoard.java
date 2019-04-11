@@ -17,6 +17,10 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class GameBoard extends GameRules {
+	
+	/*
+	 * Variables used
+	 */
 	public static final int TILE_SIZE = 100;
 	public static final int COLUMNS = 7;
 	public static final int ROWS = 6;
