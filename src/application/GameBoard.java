@@ -15,7 +15,13 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-
+/**
+ * 
+ * Class to create the game board for the gameplay
+ * 
+ * @author galvina
+ *
+ */
 public class GameBoard extends GameRules {
 	
 	/*
